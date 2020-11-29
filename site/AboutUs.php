@@ -1,9 +1,5 @@
-<?php
-    session_start();
-    print_r($_SESSION);
-    if(!isset($_SESSION["usuario"])){
-        header("location: login.php");
-    }
+<?php  
+  include_once("../autenticate/autenticacao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,7 +17,7 @@
 <body>
 
 <?php  include("nav.php"); ?>
-   <?php  include("aside.php"); ?>
+<?php  include("aside.php"); ?>
 
     <div class="info">
         <h1 class="h1">Sobre nós</h1><br><br><br>

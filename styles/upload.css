@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+body{
+    background-image: url("../imagens/background7.png");
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+    font-family: 'Roboto';
+}
+
+.layout-upload{
+    margin-top: 215px;
+    margin-left: 445px;
+}
+h1{
+    margin-bottom: 70px;
+    background-color: hsla(0, 0%, 33%, 0.75);
+
+    border: solid 2px;
+    border-radius: 15px;
+
+    padding-left: 30px;
+    padding-top: 10px;
+
+    height: 55px;
+    width: 490px;
+}
+.chage-image{
+    margin-left: 70px;
+
+    border: solid 2px;
+    border-radius: 15px;
+
+    background-color: hsla(0, 0%, 33%, 0.75);
+
+    height: 45px;
+    width: 350px;
+
+    font-size: 30px;
+}
+.salvar{
+    margin-left: 150px;
+    margin-top: 25px;
+
+    font-size: 25px;
+
+    padding: 5px;
+
+    border: solid 2px;
+    border-radius: 15px;
+
+
+    background-color: hsla(0, 0%, 33%, 0.75);
+}

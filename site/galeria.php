@@ -15,9 +15,8 @@
 </head>
 
 <body>
-<?php  include("nav.php"); ?>
-
-    <?php  include("aside.php"); ?>
+  <?php  include("nav.php"); ?>
+  <?php  include("aside.php"); ?>
 
 
 

@@ -1,0 +1,193 @@
+.LayoutProfile{
+    margin-top: 100px;
+    margin-left: 90px;
+
+    display: grid;
+
+    background-color: #678634;
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    height: 360px;
+    width: 1190px;
+
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+
+    grid-row: 4;
+    grid-column: 3;
+
+
+    position: relative;
+}
+
+ input[type='file'] {
+    display: none
+}   
+
+.imgProfile{
+    cursor: pointer;
+
+    margin-top: 80px;
+    margin-left: 55px;
+
+    background-color: #fff;
+
+    height: 200px;
+    width: 200px;
+
+    border-radius: 50%;;
+
+    grid-row: 1;
+    grid-column: 1;
+
+
+    position: absolute;
+}
+.indProfile{
+
+    grid-row: 1;
+    grid-column: 1;
+
+    margin-top: 150px;
+    margin-left: 275px;
+}
+
+.btn-whatsapp{
+    width: 150px;
+    height: 50px;
+
+    position: relative;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: rgb(214, 214, 214);
+
+    margin-top: 160px;
+    margin-left: 350px;
+
+    grid-row: 1;
+    grid-column: 3;
+
+    cursor: pointer;
+}
+.btn-whatsapp:hover{
+    background-color: rgb(185, 183, 183);
+}
+
+
+.star{
+    position: relative;
+
+    margin-left: 375px;
+
+    justify-content: center;
+
+    grid-row: 3;
+    grid-column: 3; 
+}
+
+.estrelas input[type=radio]{
+    display: none;
+}.estrelas label i.fa:before{
+    content: '\f005';
+    color: #FC0;
+}.estrelas  input[type=radio]:checked  ~ label i.fa:before{
+    color: #CCC;
+}
+.btn-avaliar{
+    border: none;
+    border-radius: 5px;
+
+    margin-left: 30px;
+
+    padding: 5px;
+   
+}
+
+
+/*-------------------------------------------------------------------*/
+
+.LayoutProfile-2{
+    margin-top: 0px;
+    margin-left: 90px;
+    margin-bottom: 90px;
+
+    display: grid;
+
+    position: relative;
+
+    background-color: rgb(228, 226, 226);
+
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    width: 1190px;
+    height: 720px;
+}
+
+.SocialMidia{
+
+    grid-row: 1;
+    grid-column: 1;
+}
+.profissao{
+    margin-top: 50px;
+    margin-left: 90px;
+
+}
+
+.telefone{
+    margin-top: 10px;
+    margin-left: 90px;
+}
+
+.img-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    grid-row: 1;
+    grid-column: 1;
+
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+.btn-edit{
+    height: 50px;
+    width: 50px;
+
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 25px;
+
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+
+    grid-row: 1;
+    grid-column: 3;
+
+    margin-top: 25px;
+    margin-left: 570px;
+
+    background-color: #4a6323;
+}
+
+.a-edit{
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-edit:hover{
+    background-color: #3c501d;
+}
+.a-edit:hover{
+    color: #fff;
+}

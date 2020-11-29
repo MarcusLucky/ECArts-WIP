@@ -1,5 +1,5 @@
 .LayoutProfile{
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: 90px;
 
     display: grid;
@@ -22,11 +22,6 @@
 
 
     position: relative;
-}
-
-.myprofileTitle{
-    margin-top: 90px;
-    margin-left: 90px;
 }
 
  input[type='file'] {
@@ -78,6 +73,7 @@
     grid-row: 1;
     grid-column: 3;
 
+
     cursor: pointer;
 }
 .btn-whatsapp:hover{
@@ -108,7 +104,7 @@
     border: none;
     border-radius: 5px;
 
-    margin-left: 20px;
+    margin-left: 30px;
 
     padding: 5px;
    
@@ -158,4 +154,7 @@
 
     grid-row: 1;
     grid-column: 1;
+
+    margin-top: 90px;
+    margin-left: 50px;
 }

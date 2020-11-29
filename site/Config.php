@@ -10,6 +10,9 @@
 	<title> ECArts - Configuração </title>
 	<h1 align="center"> config </h1>
 
+	<script src="https://kit.fontawesome.com/f6d182f726.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="../styles/styles.css">
 	<link rel="stylesheet" href="../styles/config.css">
 </head>
@@ -31,18 +34,21 @@
 
 		<form method="POST" action="salvarImagem.php"  enctype="multipart/form-data">
 			<p><input class="up chage-image" type="file" name="image" value="Troca de imagem" required></p>
-			<button type="submit">Salvar Imagem</button>
-		</form>
+			<button type="submit" class="salvar">
+			<i class="fas fa-share-square"></i>
+			Salvar Imagem
 
+			</button>
+		</form>	
 
-
-		<p><Button class="up delete-perfil" onclick="Apagar">Apagar conta</button>
-			<!-- ao clicar na imagem voce pode visualizala -->
-		<p><button class="up add-card" onclick="">Adiconar cartão</button></p>
-		<p> <input class="up back" type="button" value="voltar" onclick="history.back()"></p>
+		<p><Button class="up delete-perfil" onclick="Apagar">
+		<i class="fas fa-trash-alt"></i>
+		Apagar conta
+		</button>
+			
 	</div>
-	<form method="POST" action="processa.php">
-		<table class="table-dados" align="center" style="border:4px double;" width="600" height="300">
+	<form class="dados" method="POST" action="processa.php">
+		<table class="table-dados" align="center"  width="600" height="300">
 			<tr>
 				<th align="left"> Dados Pessoais</th>
 			</tr>

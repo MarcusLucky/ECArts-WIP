@@ -1,7 +1,3 @@
-<?php
-	require_once '../classes/usuarios.php';
-	$u = new usuario;
-?>
 
 <!DOCTYPE html>
 <html>

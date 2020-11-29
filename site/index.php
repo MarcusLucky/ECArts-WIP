@@ -1,10 +1,7 @@
-<?php
-    session_start();
-    print_r($_SESSION);
-    if(!isset($_SESSION["usuario"])){
-        header("location: login.php");
-    }
+<?php  
+  include_once("../autenticate/autenticacao.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

@@ -6,9 +6,9 @@
   $senha = $_POST["password"];
   $email = $_POST["email"];
   $telefone = $_POST["telefone"];
-  $profissao = $_POST["profissao"];
+  $profissao = $_POST["profession"];
 
-  $sql = "INSERT INTO usuarios(nome, email, senha, telefone, profissional) VALUES ('$nome', '$email', '$senha', '$telefone', '$profissao')";
+  $sql = "INSERT INTO usuarios(nome, email, senha, telefone, profissao ) VALUES ('$nome', '$email', '$senha', '$telefone', '$profissao')";
 
   if (mysqli_query($conexao, $sql)) {
     echo "New record created successfully";

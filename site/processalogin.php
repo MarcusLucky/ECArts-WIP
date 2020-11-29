@@ -1,5 +1,6 @@
 <?php 
   include_once("conexao.php");
+  include_once("../classes/usuario.php");
 
   if(!$conexao){
     echo "Falha na conexao com Banco de Dados";
@@ -15,24 +16,13 @@
     $outp = $result->fetch_all(MYSQLI_ASSOC);
 
     if(!empty($outp)) {
+      $_SESSION["usuario"] = new Usuario($outp[0]['id_usuario'], $outp[0]['nome'], $outp[0]['email'], $outp[0]['senha'], $outp[0]['telefone'], $outp[0]['foto_perfil'], $outp[0]['profissao'], $outp[0]['avalicao_user']);
+      
 
-      $_SESSION["usuario"]["id_usuario"] = $outp[0]['id_usuario'];
-      $_SESSION["usuario"]["nome"] = $outp[0]['nome'];
-      $_SESSION["usuario"]["email"] = $outp[0]['email'];
-      $_SESSION["usuario"]["senha"] = $outp[0]['senha'];
-      $_SESSION["usuario"]["telefone"] = $outp[0]['telefone'];
-	  
-	    echo $_SESSION["usuario"]["id_usuario"];
-	    echo $_SESSION["usuario"]["nome"];
-	    echo $_SESSION["usuario"]["email"];
-	    echo $_SESSION["usuario"]["senha"];
-	    echo $_SESSION["usuario"]["telefone"];
+      echo $_SESSION["usuario"]->getNome();
 
-
-      print_r($_SESSION);
-      //print_r($outp[0]);
       echo "<br>";
-      header("location: index.php");
+      // header("location: index.php");
     } else {
       header("location: login.php");
 	  echo "a";

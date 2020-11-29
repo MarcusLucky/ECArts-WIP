@@ -150,3 +150,12 @@
     margin-top: 10px;
     margin-left: 90px;
 }
+
+.img-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    grid-row: 1;
+    grid-column: 1;
+}

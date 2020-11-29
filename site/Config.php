@@ -1,10 +1,7 @@
-<?php
-    session_start();
-    print_r($_SESSION);
-    if(!isset($_SESSION["usuario"])){
-        header("location: login.php");
-    }
+<?php  
+  include_once("../autenticate/autenticacao.php");
 ?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -39,7 +36,14 @@
 
 
 	<div class="up-div">
-		<p><input class="up chage-image" type="file" name="image" value="Troca de imagem" require></p>
+
+		<form method="POST" action="salvarImagem.php"  enctype="multipart/form-data">
+			<p><input class="up chage-image" type="file" name="image" value="Troca de imagem" required></p>
+			<button type="submit">Salvar Imagem</button>
+		</form>
+
+
+
 		<p><Button class="up delete-perfil" onclick="Apagar">Apagar conta</button>
 			<!-- ao clicar na imagem voce pode visualizala -->
 		<p><button class="up add-card" onclick="">Adiconar cartão</button></p>

@@ -1,11 +1,5 @@
-<?php
-    session_start();
-    
-    print_r($_SESSION);
-    if(!isset($_SESSION["usuario"])){
-        header("location: login.php");
-    }
-
+<?php  
+  include_once("../autenticate/autenticacao.php");
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +34,15 @@
 
     <div class="LayoutProfile">
         
-    <label class="imgProfile">
+
+    <img class="img-profile" src="../uploads/users/<?php echo $_SESSION["usuario"]->getFotoPerfil(); ?>" alt="perfil">
+    <!-- <label class="imgProfile">
         <input type="file" name="image" required />
-    </label>
+    </label> -->
 
     <label class="indProfile">
-    <h1><?php echo $_SESSION["usuario"]["nome"]; ?></h1>
-    <h3>ID: <?php echo $_SESSION["usuario"]["id_usuario"]; ?></h3>
+    <h1><?php echo $_SESSION["usuario"]->getNome(); ?></h1>
+    <h3>ID: <?php echo $_SESSION["usuario"]->getIdUsuario(); ?></h3>
 
     </label>
 
@@ -83,8 +79,8 @@
 
         <label class="SocialMidia">
 
-        <h1 class="profissao">Profissão:</h1>
-        <h1 class="telefone">Whatsapp: <?php echo $_SESSION["usuario"]["telefone"]; ?></h1>
+        <h1 class="profissao">Profissão: <?php echo $_SESSION["usuario"]->getProfissao(); ?></h1>
+        <h1 class="telefone">Whatsapp: <?php echo $_SESSION["usuario"]->getTelefone(); ?></h1>
 
         </label>
 

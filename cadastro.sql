@@ -22,3 +22,10 @@ CREATE TABLE imagem(
 
 ALTER TABLE imagem
 ADD CONSTRAINT fk_id_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario);
+
+create or replace view post as 
+    select 
+        nome, foto_perfil, i.*
+    from 
+        usuarios u
+    join imagem i on i.id_usuario = u.id_usuario; 

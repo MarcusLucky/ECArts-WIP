@@ -2,7 +2,7 @@
   include_once("../autenticate/autenticacao.php");
   include_once("conexao.php");
 
-  $sql = "SELECT * FROM imagem";
+  $sql = "SELECT * FROM post";
   $result = $conexao->query($sql);
   $imagens = array();
   $imagens = $result->fetch_all(MYSQLI_ASSOC);
@@ -35,6 +35,12 @@
             <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
           </header>
           <article>
+          <a href="Perfil.php?'.$imagem['id_usuario'].'">
+          <img class="teste" src="../uploads/users/'.$imagem['foto_perfil'].'" alt+"">
+          </a>
+            '.$imagem['nome'].'
+          </article>
+          <footer>
             <form method="POST" action="processa.php" enctype="multipart/form-data" class="star">
               <div class="estrelas">
                 <input type="radio" id="vazio" name="estrela" value="" checked>
@@ -57,7 +63,7 @@
                 <input type="submit" value="Avaliar" class="btn-avaliar">
                 </div>
               </form>
-          </article>
+          </footer>
       </div>';
     }
 

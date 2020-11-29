@@ -171,11 +171,13 @@
     border: none;
     border-radius: 50%;
 
+    position: absolute;
+
+    top: 25px;
+    right: 15px;
+
     grid-row: 1;
     grid-column: 3;
-
-    margin-top: 25px;
-    margin-left: 570px;
 
     background-color: #4a6323;
 }

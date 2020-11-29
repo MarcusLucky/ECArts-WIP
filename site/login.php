@@ -1,10 +1,13 @@
+<?php  
+  include_once("../autenticate/autenticacao.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECArts - Meu Perfil</title>
+    <title>ECArts - login</title>
 
     <script src="https://kit.fontawesome.com/f6d182f726.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/styles.css">
@@ -17,9 +20,11 @@
 
 <body>
 
-<?php  include("nav.php"); ?>
-
-    <?php  include("aside.php"); ?>
+<div class="root">
+        <a href="index.php">
+            <img src="../imagens/ecarts.png" alt="logo">
+        </a>
+    </div>
 
     <form action="processalogin.php" method="POST">
 

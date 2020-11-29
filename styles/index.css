@@ -55,3 +55,30 @@ html{
 .contract:hover{
     background-color: rgb(218, 216, 216);
 }
+
+.layout-index{
+    margin-top: 60px;
+    margin-left: 60px;
+
+    width: 1300px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.post{
+    margin: 25px;
+    margin-bottom: 0px;
+
+    background: #676382;
+
+    height: 300px;
+    width: 250px;
+}
+header{
+    height: 200px;
+    width: 250px;
+}
+.img-posted{
+    height: 200px;
+    width: 250px;
+}

@@ -1,5 +1,11 @@
 <?php  
   include_once("../autenticate/autenticacao.php");
+  include_once("conexao.php");
+
+  $sql = "SELECT * FROM imagem";
+  $result = $conexao->query($sql);
+  $imagens = array();
+  $imagens = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -16,16 +22,26 @@
 </head>
 
 <body>
-
-
 	<?php  include("nav.php"); ?>
 	<?php  include("aside.php"); ?>
 
 <div class="layout-index">
 
+  <?php 
+    foreach($imagens as $imagem) {
+      echo'
+      <div class="post">
+          <header>
+            <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
+          </header>
+          <article>
+            
+          </article>
+      </div>';
+    }
 
-
-
+  ?>
+ 
 </div>
 
 </body>

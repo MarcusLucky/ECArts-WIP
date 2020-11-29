@@ -21,7 +21,7 @@
     
     <div class="layout-upload">
         <h1>FAÇA O UPLOAD DA IMAGEM</h1>
-    <form method="POST" action="salvarImagem.php"  enctype="multipart/form-data" class="form-enviar">
+    <form method="POST" action="salvarImagempost.php"  enctype="multipart/form-data" class="form-enviar">
 			<p><input class="up chage-image" type="file" name="image" value="Troca de imagem" required></p>
 			<button type="submit" class="salvar">
 			<i class="fas fa-share-square"></i>

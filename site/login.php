@@ -1,6 +1,4 @@
-<?php  
-  include_once("../autenticate/autenticacao.php");
-?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

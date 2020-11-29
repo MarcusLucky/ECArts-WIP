@@ -18,19 +18,11 @@
     if(!empty($outp)) {
       $_SESSION["usuario"] = new Usuario($outp[0]['id_usuario'], $outp[0]['nome'], $outp[0]['email'], $outp[0]['senha'], $outp[0]['telefone'], $outp[0]['foto_perfil'], $outp[0]['profissao'], $outp[0]['avalicao_user']);
       
-
-      echo $_SESSION["usuario"]->getNome();
-
       echo "<br>";
-      // header("location: index.php");
+      header("location: index.php");
     } else {
       header("location: login.php");
 	  echo "a";
     }
 
-
-
-  // $_SESSION["usuario"]["id"] = $outp[0]['id'];
-
-  // echo json_encode($outp);
 ?>

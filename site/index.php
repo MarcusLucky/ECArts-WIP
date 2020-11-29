@@ -35,7 +35,28 @@
             <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
           </header>
           <article>
-            
+            <form method="POST" action="processa.php" enctype="multipart/form-data" class="star">
+              <div class="estrelas">
+                <input type="radio" id="vazio" name="estrela" value="" checked>
+
+                <label for="estrela_um'.$imagem['id_img'].'"><i class="fa"></i></label>
+                <input type="radio" id="estrela_um'.$imagem['id_img'].'" name="estrela" value="1">
+
+                <label for="estrela_dois'.$imagem['id_img'].'"><i class="fa"></i></label>
+                <input type="radio" id="estrela_dois'.$imagem['id_img'].'" name="estrela" value="2">
+
+                <label for="estrela_tres'.$imagem['id_img'].'"><i class="fa"></i></label>
+                <input type="radio" id="estrela_tres'.$imagem['id_img'].'" name="estrela" value="3">
+
+                <label for="estrela_quatro'.$imagem['id_img'].'"><i class="fa"></i></label>
+                <input type="radio" id="estrela_quatro'.$imagem['id_img'].'" name="estrela" value="4">
+
+                <label for="estrela_cinco'.$imagem['id_img'].'"><i class="fa"></i></label>
+                <input type="radio" id="estrela_cinco'.$imagem['id_img'].'" name="estrela" value="5">
+
+                <input type="submit" value="Avaliar" class="btn-avaliar">
+                </div>
+              </form>
           </article>
       </div>';
     }
@@ -45,7 +66,7 @@
 </div>
 
 </body>
-
+<script src="https://kit.fontawesome.com/f6d182f726.js" crossorigin="anonymous"></script>
 <script src="../styles/main.js"></script>
 
 </html>

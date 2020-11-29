@@ -82,3 +82,21 @@ header{
     height: 200px;
     width: 250px;
 }
+
+.estrelas input[type=radio]{
+    display: none;
+}.estrelas label i.fa:before{
+    content: '\f005';
+    color: #FC0;
+}.estrelas  input[type=radio]:checked  ~ label i.fa:before{
+    color: #CCC;
+}
+.btn-avaliar{
+    border: none;
+    border-radius: 5px;
+
+    margin-left: 30px;
+
+    padding: 5px;
+
+}

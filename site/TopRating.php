@@ -19,15 +19,7 @@
 
 <body>
 
-<nav class="nav-main">
-        <div class="btn-toggle-nav" onclick="toggleNav()"></div>
-        <ul class="top">
-            <li><a href="index.php">Principal</a></li>
-            <li><a href="TopRating.php">Melhores Avaliados</a></li>
-            <li class="help"><a href="help.php">Ajuda</a></li>
-            <li class="abous"><a href="AboutUs.php">Sobre Nós</a></li>
-        </ul>
-    </nav>
+<?php  include("nav.php"); ?>
 
     <?php  include("aside.php"); ?>
 

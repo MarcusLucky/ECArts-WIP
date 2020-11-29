@@ -23,7 +23,7 @@ body{
 .btn-toggle-nav{
     width: 60px;
     height: 100%;
-    background-color: #8601d3;
+    /* background-color: #8601d3; */
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -120,4 +120,9 @@ body{
 
 .exit:hover{
     background-color: rgb(255, 0, 0);
+}
+
+.teste {
+    width: 60px;
+    height: 60px;
 }

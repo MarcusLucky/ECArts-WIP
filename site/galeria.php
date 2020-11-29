@@ -1,9 +1,5 @@
-<?php
-    session_start();
-    print_r($_SESSION);
-    if(!isset($_SESSION["usuario"])){
-        header("location: login.php");
-    }
+<?php  
+  include_once("../autenticate/autenticacao.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,16 +15,7 @@
 </head>
 
 <body>
-
-<nav class="nav-main">
-        <div class="btn-toggle-nav" onclick="toggleNav()"></div>
-        <ul class="top">
-            <li><a href="index.php">Principal</a></li>
-            <li><a href="TopRating.php">Melhores Avaliados</a></li>
-            <li class="help"><a href="help.php">Ajuda</a></li>
-            <li class="abous"><a href="AboutUs.php">Sobre Nós</a></li>
-        </ul>
-    </nav>
+<?php  include("nav.php"); ?>
 
     <?php  include("aside.php"); ?>
 

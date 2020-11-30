@@ -36,12 +36,14 @@
         <input type="file" name="image" required />
     </label> -->
 
+    
+
     <label class="indProfile">
     <h1><?php echo $usuario["nome"]; ?></h1>
 
     </label>
 
-    <form method="POST" action="processa.php" enctype="multipart/form-data" class="star">
+    <form method="POST" action="avalia_user.php" enctype="multipart/form-data" class="star">
             <div class="estrelas">
                 <input type="radio" id="vazio" name="estrela" value="" checked>
 
@@ -59,10 +61,13 @@
 
                 <label for="estrela_cinco"><i class="fa"></i></label>
                 <input type="radio" id="estrela_cinco" name="estrela" value="5"><br>
-
+                
+                <input type="hidden" name="id" value="<?php echo $usuario["id_usuario"] ?>"><br>
+                <input type="hidden" name="estrelas" value="<?php echo $usuario["avaliacao_user"]; ?>"><br>
+            
                 <input type="submit" value="Avaliar" class="btn-avaliar">
                 <br>
-                Media de Rating
+                Estrelas <?php echo $usuario['avaliacao_user'] ?>
             </div>
         </form>
 
@@ -85,6 +90,13 @@
     </div>
 
 
+    <?php 
+        if(isset($_GET["sucesso"])) {
+            echo  "<script>alert('Avaliação enviada com sucesso!');</script>";
+          } else if (isset($_GET["erroEstrela"])) {
+            echo  "<script>alert('Erro ao enviar avaliação! Selecione pelo menos uma estrela');</script>";
+        }
+    ?>
 
 </body>
 

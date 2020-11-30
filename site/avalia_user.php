@@ -9,12 +9,12 @@
 	$estrela = $_POST["estrela"];
 	$avaliacao = $_POST["estrelas"];
 
-	$result = $estrela + $avaliacao;
+  $result = $estrela + $avaliacao;
 
-	$sql = "UPDATE imagem SET avaliacao_img = $result WHERE id_img = $id";
+	$sql = "UPDATE usuarios SET avaliacao_user = $result WHERE id_usuario = $id";
 	$conexao->query($sql);
 	$conexao->close();
 
 	// echo $sql;
-	die(header("location: index.php?sucesso"));
+	die(header("location: perfil.php?sucesso"));
 ?>

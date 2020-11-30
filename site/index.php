@@ -28,6 +28,13 @@
 <div class="layout-index">
 
   <?php 
+
+    if(isset($_GET["sucesso"])) {
+      echo  "<script>alert('Avaliação enviada com sucesso!');</script>";
+    } else if (isset($_GET["erroEstrela"])) {
+      echo  "<script>alert('Erro ao enviar avaliação! Selecione pelo menos uma estrela');</script>";
+    }
+  
     foreach($imagens as $imagem) {
       echo'
       <div class="post">
@@ -41,7 +48,7 @@
             '.$imagem['nome'].'
           </article>
           <footer>
-            <form method="POST" action="processa.php" enctype="multipart/form-data" class="star">
+            <form method="POST" action="avalia.php" enctype="multipart/form-data" class="star">
               <div class="estrelas">
                 <input type="radio" id="vazio" name="estrela" value="" checked>
 
@@ -59,6 +66,9 @@
 
                 <label for="estrela_cinco'.$imagem['id_img'].'"><i class="fa"></i></label>
                 <input type="radio" id="estrela_cinco'.$imagem['id_img'].'" name="estrela" value="5">
+
+                <input type="hidden" name="id" value="'.$imagem['id_img'].'" />
+                <input type="hidden" name="estrelas" value="'.$imagem['avaliacao_img'].'" />
 
                 <input type="submit" value="Avaliar" class="btn-avaliar">
                 </div>

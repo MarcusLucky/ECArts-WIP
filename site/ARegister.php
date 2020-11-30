@@ -92,7 +92,10 @@
                                     <option value="artist">Artista</option>
                                     <option value="photographer">Fotógrafo(a)</option>
                                     <option value="illustrator">Ilustrador(a)</option>
-                                    <option value="web-disigner">Web-Designer</option>
+                                    <option value="web-designer">Web-Designer</option>
+                                    <option value="Escultor">Escultor</option>
+                                    <option value="3D modeler">Modelador 3D</option>
+                                    <option value="Painter">Pintor</option>
                                 </select>
                             </label>
                         </label>

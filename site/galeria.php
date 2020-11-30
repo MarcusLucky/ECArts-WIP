@@ -28,7 +28,7 @@
   <div class="layout-index">
   <?php 
     if(sizeof($imagens) == 0) {
-      echo "caso ele não tenha postado nenhuma foto";
+      echo "Sem fotos no momento";
     }
     foreach($imagens as $imagem) {
       echo'

@@ -43,9 +43,9 @@
           </header>
           <article>
           <a href="Perfil.php?id='.$imagem['id_usuario'].'" style="text-decoration: none">
-            <img class="teste" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
+            <img class="img-perfil" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
           </a>
-            '.$imagem['nome'].'
+            <h1 class="nome-post">'.$imagem['nome'].'<h1>
           </article>
           <footer>
             <form method="POST" action="avalia.php" enctype="multipart/form-data" class="star">

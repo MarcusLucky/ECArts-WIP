@@ -1,5 +1,12 @@
 <?php  
-  include_once("../autenticate/autenticacao.php");      
+    include_once("../autenticate/autenticacao.php");      
+    include_once("conexao.php");
+
+    $sql = "SELECT * FROM post";
+    $result = $conexao->query($sql);
+    $outp = array();
+    $imagens = $result->fetch_all(MYSQLI_ASSOC);
+    $usuario = $imagens[0];
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECArts - Perfil</title>
+    <title>ECArts - Meu Perfil</title>
 
     <script src="https://kit.fontawesome.com/f6d182f726.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/styles.css">
@@ -39,6 +46,8 @@
         </a>
     </button>
 
+   <h1 class="star-rating"><i class="fas fa-star"></i><?php echo $usuario['avaliacao_user'] ?></h1>
+
     </div>
 
     <div class="LayoutProfile-2">
@@ -50,8 +59,20 @@
 
         </label>
 
+<div class="layout-img">
+  <?php 
+        if(sizeof($imagens) == 0) {
+        echo "Sem fotos no momento";
+        }
+        foreach($imagens as $imagem) {
+        echo'
+        <div class="post">
+            <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
+        </div>';
+        }
 
-    
+    ?>
+</div>    
 
     </div>
 

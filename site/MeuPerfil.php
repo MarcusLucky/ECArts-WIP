@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECArts - Perfil</title>
+    <title>ECArts - Meu Perfil</title>
 
     <script src="https://kit.fontawesome.com/f6d182f726.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/styles.css">

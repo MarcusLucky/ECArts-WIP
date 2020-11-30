@@ -36,7 +36,7 @@
           </header>
           <article>
           <a href="Perfil.php?'.$imagem['id_usuario'].'" style="text-decoration: none">
-            <img class="teste" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
+            <img class="img-perfil" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
           </a>
             '.$imagem['nome'].'
           </article>

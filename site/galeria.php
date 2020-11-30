@@ -18,7 +18,9 @@
   <?php  include("nav.php"); ?>
   <?php  include("aside.php"); ?>
 
-
+  <?php
+    $mysql
+  ?>
 
 </body>
 

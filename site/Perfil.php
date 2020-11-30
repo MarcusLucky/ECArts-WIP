@@ -45,27 +45,27 @@
     </label>
 
     <footer>
-            <form method="POST" action="avalia.php" enctype="multipart/form-data" class="star">
+            <form method="POST" action="avalia_user.php" enctype="multipart/form-data" class="star">
               <div class="estrelas">
                 <input type="radio" id="vazio" name="estrela" value="" checked>
 
-                <label for="estrela_um'.$imagem['id_img'].'"><i class="fa"></i></label>
-                <input type="radio" id="estrela_um'.$imagem['id_img'].'" name="estrela" value="1">
+                <label for="estrela_um"><i class="fa"></i></label>
+                <input type="radio" id="estrela_um" name="estrela" value="1">
 
-                <label for="estrela_dois'.$imagem['id_img'].'"><i class="fa"></i></label>
-                <input type="radio" id="estrela_dois'.$imagem['id_img'].'" name="estrela" value="2">
+                <label for="estrela_dois"><i class="fa"></i></label>
+                <input type="radio" id="estrela_dois" name="estrela" value="2">
 
-                <label for="estrela_tres'.$imagem['id_img'].'"><i class="fa"></i></label>
-                <input type="radio" id="estrela_tres'.$imagem['id_img'].'" name="estrela" value="3">
+                <label for="estrela_tres"><i class="fa"></i></label>
+                <input type="radio" id="estrela_tres" name="estrela" value="3">
 
-                <label for="estrela_quatro'.$imagem['id_img'].'"><i class="fa"></i></label>
-                <input type="radio" id="estrela_quatro'.$imagem['id_img'].'" name="estrela" value="4">
+                <label for="estrela_quatro"><i class="fa"></i></label>
+                <input type="radio" id="estrela_quatro" name="estrela" value="4">
 
-                <label for="estrela_cinco'.$imagem['id_img'].'"><i class="fa"></i></label>
-                <input type="radio" id="estrela_cinco'.$imagem['id_img'].'" name="estrela" value="5">
+                <label for="estrela_cinco"><i class="fa"></i></label>
+                <input type="radio" id="estrela_cinco" name="estrela" value="5">
 
-                <input type="hidden" name="id" value="'.$imagem['id_img'].'" />
-                <input type="hidden" name="estrelas" value="'.$imagem['avaliacao_img'].'" />
+                <input type="hidden" name="id" value="<?php echo $usuario['id_usuario'] ?>" />
+                <input type="hidden" name="estrelas" value="<?php echo $usuario['avaliacao_user'] ?>" />
 
                 <input type="submit" value="Avaliar" class="btn-avaliar">
                 </div>

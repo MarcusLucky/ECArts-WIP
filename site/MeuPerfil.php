@@ -2,11 +2,18 @@
     include_once("../autenticate/autenticacao.php");      
     include_once("conexao.php");
 
-    $sql = "SELECT * FROM post";
+    $id = $_SESSION["usuario"]->getIdUsuario();
+
+    $sql = "SELECT * FROM post where id_usuario = $id";
     $result = $conexao->query($sql);
-    $outp = array();
+    $imagens = array();
     $imagens = $result->fetch_all(MYSQLI_ASSOC);
-    $usuario = $imagens[0];
+
+    $sql = "SELECT * FROM usuarios where id_usuario = $id";
+    $result = $conexao->query($sql);
+    $usuario = array();
+    $usuario = $result->fetch_all(MYSQLI_ASSOC);
+    $usuario = $usuario[0];
 ?>
 
 <!DOCTYPE html>
@@ -31,11 +38,11 @@
     <div class="LayoutProfile">
         
 
-    <img class="img-profile" src="../uploads/users/<?php echo $_SESSION["usuario"]->getFotoPerfil(); ?>" alt="perfil">
+    <img class="img-profile" src="../uploads/users/<?php echo $usuario["foto_perfil"] ?>" alt="perfil">
 
     <label class="indProfile">
-    <h1><?php echo $_SESSION["usuario"]->getNome(); ?></h1>
-    <h3>ID: <?php echo $_SESSION["usuario"]->getIdUsuario(); ?></h3>
+    <h1><?php echo $usuario["nome"] ?></h1>
+    <h3>ID: <?php echo $usuario["id_usuario"] ?></h3>
     
     </label>
 
@@ -46,7 +53,7 @@
         </a>
     </button>
 
-   <h1 class="star-rating"><i class="fas fa-star"></i><?php echo $usuario['avaliacao_user'] ?></h1>
+   <h1 class="star-rating"><i class="fas fa-star"></i><?php echo $usuario["avaliacao_user"] ?></h1>
 
     </div>
 
@@ -54,8 +61,8 @@
 
         <label class="SocialMidia">
 
-        <h1 class="profissao">Profissão: <?php echo $_SESSION["usuario"]->getProfissao(); ?></h1>
-        <h1 class="telefone">Whatsapp: <?php echo $_SESSION["usuario"]->getTelefone(); ?></h1>
+        <h1 class="profissao">Profissão: <?php echo $usuario["profissao"] ?></h1>
+        <h1 class="telefone">Whatsapp: <?php echo $usuario["telefone"] ?></h1>
 
         </label>
 

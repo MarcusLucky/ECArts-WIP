@@ -43,7 +43,7 @@
             <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
           </header>
           <article>
-          <a href="Perfil.php?'.$imagem['id_usuario'].'" style="text-decoration: none">
+          <a href="Perfil.php?id='.$imagem['id_usuario'].'" style="text-decoration: none">
             <img class="img-perfil" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
           </a>
           <h1 class="nome-post">'.$imagem['nome'].'<h1>

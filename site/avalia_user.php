@@ -15,6 +15,6 @@
 	$conexao->query($sql);
 	$conexao->close();
 
-	// echo $sql;
-	die(header("location: perfil.php?sucesso"));
+	echo $sql;
+	die(header("location: perfil.php?id=$id&sucesso"));
 ?>

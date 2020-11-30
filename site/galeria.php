@@ -1,5 +1,11 @@
 <?php  
   include_once("../autenticate/autenticacao.php");
+  include_once("conexao.php");
+  $id = $_SESSION["usuario"]->getIdUsuario();
+  $sql = "SELECT * FROM post WHERE id_usuario = $id";
+  $result = $conexao->query($sql);
+  $imagens = array();
+  $imagens = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +24,21 @@
   <?php  include("nav.php"); ?>
   <?php  include("aside.php"); ?>
 
-  <?php
-    $mysql
-  ?>
+  
+  <div class="layout-index">
+  <?php 
+    if(sizeof($imagens) == 0) {
+      echo "caso ele não tenha postado nenhuma foto";
+    }
+    foreach($imagens as $imagem) {
+      echo'
+      <div class="post">
+          <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
+      </div>';
+    }
 
+  ?>
+  </div>
 </body>
 
 <script src="../styles/main.js"></script>

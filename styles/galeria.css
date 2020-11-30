@@ -61,3 +61,22 @@ html{
     top: 50px;
     left: 0px;
 }
+
+.layout-index{
+    margin-top: 60px;
+    margin-left: 60px;
+
+    width: 1300px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.post{
+    margin: 25px;
+}
+
+.img-posted{
+    height: 400px;
+    width: 500px;
+}
+

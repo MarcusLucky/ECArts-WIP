@@ -65,7 +65,7 @@
 
 			<tr>
 				<td align="right"> Tel:</td>
-				<td><input class="input-form" type="text" size="30" name="telefone" maxlength="9" value="<?php echo $_SESSION["usuario"]->getTelefone(); ?>"/> </td>
+				<td><input class="input-form" type="text" size="30" name="telefone" value="<?php echo $_SESSION["usuario"]->getTelefone(); ?>"/> </td>
 			</tr>
 
 			<tr>

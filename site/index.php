@@ -35,8 +35,8 @@
             <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
           </header>
           <article>
-          <a href="Perfil.php?'.$imagem['id_usuario'].'">
-          <img class="teste" src="../uploads/users/'.$imagem['foto_perfil'].'" alt+"">
+          <a href="Perfil.php?'.$imagem['id_usuario'].'" style="text-decoration: none">
+            <img class="teste" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
           </a>
             '.$imagem['nome'].'
           </article>

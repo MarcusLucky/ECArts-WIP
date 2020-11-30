@@ -1,5 +1,12 @@
 <?php  
-  include_once("../autenticate/autenticacao.php");      
+    include_once("../autenticate/autenticacao.php");      
+    include_once("conexao.php");
+
+    $sql = "SELECT * FROM post";
+    $result = $conexao->query($sql);
+    $outp = array();
+    $imagens = $result->fetch_all(MYSQLI_ASSOC);
+    $usuario = $imagens[0];
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +31,13 @@
     <div class="LayoutProfile">
         
 
-    <img class="img-profile" src="../uploads/users/<?php echo $_SESSION["usuario"]->getFotoPerfil(); ?>" alt="perfil">
+    <img class="img-profile" src="../uploads/users/<?php echo $usuario["foto_perfil"]; ?>" alt="perfil">
     <!-- <label class="imgProfile">
         <input type="file" name="image" required />
     </label> -->
 
     <label class="indProfile">
-    <h1><?php echo $_SESSION["usuario"]->getNome(); ?></h1>
-    <h3>ID: <?php echo $_SESSION["usuario"]->getIdUsuario(); ?></h3>
+    <h1><?php echo $usuario["nome"]; ?></h1>
 
     </label>
 
@@ -60,7 +66,7 @@
             </div>
         </form>
 
-    <input type="button" value="Conversar" class="btn-whatsapp">
+    <a target="_blank" href="https://wa.me/<?php echo $usuario["telefone"]; ?>"  type="button"  class="btn-whatsapp">Entrar em contato</a>
 
     </div>
 
@@ -68,8 +74,8 @@
 
         <label class="SocialMidia">
 
-        <h1 class="profissao">Profissão: <?php echo $_SESSION["usuario"]->getProfissao(); ?></h1>
-        <h1 class="telefone">Whatsapp: <?php echo $_SESSION["usuario"]->getTelefone(); ?></h1>
+        <h1 class="profissao">Profissão: <?php echo $usuario["profissao"]; ?></h1>
+        <h1 class="telefone">Whatsapp: <?php echo $usuario["telefone"]; ?></h1>
 
         </label>
 

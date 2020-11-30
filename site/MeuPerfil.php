@@ -59,8 +59,20 @@
 
         </label>
 
+<div class="layout-img">
+  <?php 
+        if(sizeof($imagens) == 0) {
+        echo "Sem fotos no momento";
+        }
+        foreach($imagens as $imagem) {
+        echo'
+        <div class="post">
+            <img class="img-posted" src="../uploads/posts/'.$imagem['imagem'].'" alt="">
+        </div>';
+        }
 
-    
+    ?>
+</div>    
 
     </div>
 

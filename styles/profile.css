@@ -176,3 +176,23 @@ footer{
     height: 55px;
     position: absolute;
 }
+
+.img-posted{
+    width: 300px;;
+    height: 250px
+}
+
+.layout-img{
+    display: grid;
+
+    border: solid 2px;
+    
+
+    height: 254px;
+
+
+    padding-left: 25px;
+ 
+
+    grid-template-columns: repeat(3, 1fr);
+}

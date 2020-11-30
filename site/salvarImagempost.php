@@ -11,8 +11,6 @@
 
   if($conexao->query($sql)) {
     move_uploaded_file($_FILES["image"]["tmp_name"], "../uploads/posts/".$novo_nome);
-    $_SESSION["usuario"]->setFotoPerfil($novo_nome);
-    echo "funcionou";
   } 
   header("location: upload.php");
 ?>

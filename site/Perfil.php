@@ -2,9 +2,10 @@
     include_once("../autenticate/autenticacao.php");      
     include_once("conexao.php");
 
-    $sql = "SELECT * FROM post";
+    $id = $_GET["id"];
+    $sql = "SELECT * FROM post where id_usuario = $id";
     $result = $conexao->query($sql);
-    $outp = array();
+    $imagens = array();
     $imagens = $result->fetch_all(MYSQLI_ASSOC);
     $usuario = $imagens[0];
 ?>

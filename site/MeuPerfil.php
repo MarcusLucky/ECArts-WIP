@@ -1,5 +1,12 @@
 <?php  
-  include_once("../autenticate/autenticacao.php");      
+    include_once("../autenticate/autenticacao.php");      
+    include_once("conexao.php");
+
+    $sql = "SELECT * FROM post";
+    $result = $conexao->query($sql);
+    $outp = array();
+    $imagens = $result->fetch_all(MYSQLI_ASSOC);
+    $usuario = $imagens[0];
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +45,8 @@
     <i class="fas fa-pen"></i>
         </a>
     </button>
+
+   <h1 class="star-rating"><i class="fas fa-star"></i><?php echo $usuario['avaliacao_user'] ?></h1>
 
     </div>
 

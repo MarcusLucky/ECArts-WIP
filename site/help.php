@@ -31,7 +31,7 @@
         <br>
         <li>Melhores Avaliados:
             <br>
-            <h2>No Melhores Avaliados, tem as iamgens com maior rating</h2>
+            <h2>No Melhores Avaliados, tem as imagens com a ordem de maior rating</h2>
 
         </li>
         <br>

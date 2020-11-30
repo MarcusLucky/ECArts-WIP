@@ -193,3 +193,20 @@
 .a-edit:hover{
     color: #fff;
 }
+
+.star-rating{
+    grid-row: 3;
+    grid-column: 3;
+
+    margin-left: 550px;
+
+    height: 40px;
+    width: 95px;
+
+    border-radius: 15px;
+    border: solid 2px yellow;
+}
+.fa-star:before {
+    content: "\f005";
+    color: yellow;
+}

@@ -75,8 +75,27 @@ html{
     margin: 25px;
 }
 
-.img-posted{
-    height: 400px;
-    width: 500px;
+article{
+    margin-bottom: 20px;
+}
+.img-perfil{
+    border-radius: 50%;
+    border: solid 2px;
+
+    height: 60px;
+    width: 60px;
+}
+.nome-post{
+    margin-top: -40px;
+    margin-left: 65px;
+    font-size: 15px;
+
 }
 
+.fa-star:before {
+
+    color: yellow;
+}
+.estrela-post{
+    font-size: 150px;
+}

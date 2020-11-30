@@ -19,6 +19,7 @@
     <script src="https://kit.fontawesome.com/f6d182f726.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/rating.css">
 </head>
 
 <body>
@@ -43,12 +44,16 @@
           </header>
           <article>
           <a href="Perfil.php?'.$imagem['id_usuario'].'" style="text-decoration: none">
-            <img class="teste" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
+            <img class="img-perfil" src="../uploads/users/'.$imagem['foto_perfil'].'" alt""/>
           </a>
-            '.$imagem['nome'].'
+          <h1 class="nome-post">'.$imagem['nome'].'<h1>
           </article>
           
-          <p>'.$imagem['avaliacao_img'].' Estrelas</p>
+          <p><h1 class="estrela-post" style="
+          font-size: 20px;
+      ">
+          '.$imagem['avaliacao_img'].'<i class="fas fa-star"></i> Estrelas
+          <h1></p>
       </div>';
     }
 

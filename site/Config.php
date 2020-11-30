@@ -8,7 +8,6 @@
 <head>
 	<meta charset="utf-8">
 	<title> ECArts - Configuração </title>
-	<h1 align="center"> config </h1>
 
 	<script src="https://kit.fontawesome.com/f6d182f726.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
@@ -41,11 +40,8 @@
 			</button>
 		</form>	
 
-		<p><Button class="up delete-perfil" onclick="Apagar">
-		<i class="fas fa-trash-alt"></i>
-		Apagar conta
-		</button>
-			
+		<p><input class="up delete-perfil" type="button" name="delete-perfil" value="Deletar perfil">
+
 	</div>
 	<form class="dados" method="POST" action="processa.php">
 		<table class="table-dados" align="center"  width="600" height="300">
